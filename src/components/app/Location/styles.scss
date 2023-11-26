@@ -1,0 +1,93 @@
+@import '../../../resources/colors.scss';
+
+.trlocation_container {
+  .location {
+    display: flex;
+    justify-content: center;
+    .title_location {
+      border-radius: 25px;
+      background-color: $primary-800;
+      padding: 8px 12px;
+      color: white;
+    }
+  }
+  .map_container {
+    display: flex;
+    justify-content: center;
+    .iframe_map {
+      width: 95%;
+      height: 400px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .direction_buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    .button {
+      gap: 10px;
+      color: $primary-500;
+      border: 2px solid $primary-500;
+      border-radius: 12px;
+      padding: 5px 12px;
+    }
+    .button:hover {
+      background-color: $primary-600;
+      color: white;
+    }
+  }
+  .buttons_options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .buttons_container {
+      display: flex;
+      :first-child {
+        border-radius: 15px 0 0 15px;
+      }
+      :nth-child(2) {
+        border-radius: 0 15px 15px 0;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 30px;
+        min-width: 100px;
+        color: $primary-500;
+        border: 1px solid $primary-500;
+        cursor: pointer;
+        &.active {
+          background-color: $primary-600;
+          color: white;
+        }
+        &.disabled {
+          background-color: white;
+          color: $primary-500;
+        }
+      }
+      .buttons:hover{
+        color: $primary-600;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .trlocation_container {
+    .map_container {
+      .iframe_map {
+        max-width: 1500px;
+        width: 80%;
+        height: 500px;
+      }
+    }
+  }
+}

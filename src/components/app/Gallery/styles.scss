@@ -1,0 +1,71 @@
+@import "../../../resources/colors.scss";
+
+.galery_container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: linear-gradient($primary-400,$primary-200);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .coment_div {
+    .comentarios {
+      text-align: center;
+      color: $primary-900;
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .swiper_container {
+    height: 100%;
+  }
+
+  .content {
+    height: 300px;
+    .lote_img {
+      object-fit: cover;
+      height: 100%;
+    }
+    .video_container {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+
+  .buttons_options {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .buttons_container {
+      display: flex;
+      :first-child {
+        border-radius: 15px 0 0 15px;
+      }
+      :nth-child(2) {
+        border-radius: 0 15px 15px 0;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 30px;
+        min-width: 100px;
+        cursor: pointer;
+        &.active {
+          background-color: $primary-600;
+          color: white;
+        }
+        &.disabled {
+          background-color: white;
+          color: $primary-500;
+        }
+      }
+    }
+  }
+}

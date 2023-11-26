@@ -1,0 +1,28 @@
+@import "../resources/globalStyles.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+p {
+  margin: 0;
+}
+
+.home_content{
+  margin-top: 70px;
+  .home_container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+}
+

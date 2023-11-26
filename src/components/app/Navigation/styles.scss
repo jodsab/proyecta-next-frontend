@@ -1,0 +1,92 @@
+@import "../../../resources/colors.scss";
+
+.tr_navigation_container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  z-index: 9999999;
+  .tr_navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+    height: 70px;
+
+    .logo {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .button {
+      background-color: $secondary;
+      color: white;
+      width: 100%;
+      border: 0;
+      border-radius: 22px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: $primary;
+    }
+  }
+}
+
+.phone_menu_container {
+  width: 200px;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo_ba_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+
+    .bosqueAlto_logo{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+
+    .item_button {
+      min-width: 150px;
+      width: 100%;
+      border: 1px solid $secondary;
+      border-radius: 22px;
+      background-color: white;
+
+      p {
+        padding: 8px 16px;
+        text-align: center;
+        color: $secondary;
+        font-size: 15px;
+      }
+    }
+
+    .item_button:focus{
+      .item_button{
+        background-color: $secondary;
+
+        p{
+          color: white;
+        }
+      }
+    }
+  }
+}
