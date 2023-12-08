@@ -58,31 +58,9 @@ const TRGallery = () => {
         <p className="bold mediumText comentarios">Galería interactiva</p>
       </div>
       <div className="content">
-        {toggleGallery ? (
+        {toggleGallery && galleryLotes ? (
           <div className="swiper_container">
             <TRSwiper data={galleryLotes} />
-            {/*             <Swiper
-              slidesPerView={1}
-              spaceBetween={20}
-              loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              modules={[Pagination, Navigation]}
-              className="mySwiper"
-            >
-              {galleryLotes.map((e) => (
-                <SwiperSlide key={e.id}>
-                  <Image
-                    className="lote_img"
-                    src={e.img}
-                    alt={`${e.id}`}
-                    loading="lazy"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper> */}
           </div>
         ) : (
           <div className="video_container">
@@ -105,7 +83,7 @@ const TRGallery = () => {
             onClick={() => setToggleGallery(true)}
           >
             <BsImages size={ICON_SIZE} />
-            <p className={`semiBold`}>Images</p>
+            <p className={`semiBold`}>Fotos</p>
           </label>
           <label
             className={`buttons  ${!toggleGallery ? "active" : "disabled"}`}

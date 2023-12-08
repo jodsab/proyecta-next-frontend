@@ -14,7 +14,7 @@ const BIGSVGSIZE = 26;
 
 const TRCard = () => {
   return (
-    <div className="trcard_container boxSuperShadow content">
+    <div className="trcard_container content">
       <div className="card_container">
         <div className="card_header">
           <div className="flexAlign iconText primaryColor">

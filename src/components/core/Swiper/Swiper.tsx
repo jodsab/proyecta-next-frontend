@@ -13,27 +13,46 @@ import "./styles.scss";
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
-export default function TRSwiper() {
+const TRSwiper = ({ data }) => {
+  const handleSlideChange = (swiper) => {
+    // Puedes hacer lo que quieras con el índice de la diapositiva activa
+  };
+
+  const ArrData = data?.map((slide: any, index: number) => {
+    return (
+      <SwiperSlide key={index}>
+        <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+          <Image src={slide.img.src} alt="image" width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }} loading="lazy" />
+          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+        </div>
+      </SwiperSlide>
+    )
+  })
+
   return (
     <>
       <Swiper
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
-        lazy="true"
+        slidesPerView={1}
+        spaceBetween={30}
+        loop
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        navigation
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        onSlideChange={handleSlideChange}
       >
-        <SwiperSlide>
-          <Image alt="image" width={300} height={300} loading="lazy" />
-          <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-        </SwiperSlide>
+        {
+          ArrData
+        }
+
       </Swiper>
     </>
   );
 }
+
+export default TRSwiper;

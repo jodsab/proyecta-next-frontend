@@ -1,5 +1,4 @@
 "use client";
-import { Element } from "react-scroll";
 import TRNavigation from "@/components/app/Navigation/Navigation";
 import TRPortada from "@/components/app/Portada/Portada";
 import TRCard from "@/components/app/Card/Card";
@@ -17,37 +16,46 @@ import { homeScroll } from "@/shared/scrolls";
 import "./index.scss";
 
 export default function HomePage() {
-  const { location, weHave, gallery, tour360, joinUs } = homeScroll;
+  const { location, weHave, gallery, tour360, joinUs, form } = homeScroll;
   return (
-    <div>
+    <div className="homepage_container">
       <TRNavigation />
+      <div className="portada_mobile_container">
+        <TRPortada />
+      </div>
       <div className="home_content">
-        <div className="home_container">
-          <TRPortada />
-          <TRCard />
+        <div className="content_mobile_container">
+          <div className="card_mobile_container">
+            <TRCard />
+          </div>
           <TRDescription />
-          <Element name={location.id} className="element">
+          <div id={location.id} className="element">
             <TRLocation />
-          </Element>
+          </div>
           <div id={weHave.id}>
             <WeHave />
           </div>
-        </div>
-        <div id={gallery.id}>
-          <TRGallery />
-        </div>
-        <div className="home_container">
+          <div id={gallery.id}>
+            <TRGallery />
+          </div>
           <div id={tour360.id}>
             <TRMultimedia />
           </div>
-          <TRForm />
-        </div>
-        <div>
+          <div className="form_mobile_container" id={form.id}>
+            <TRForm />
+          </div>
           <div id={joinUs.id}>
             <TRComentarios />
             <TRFamilys />
           </div>
           <TRFooter />
+        </div>
+        <div className="form_space_mobile_container">
+        </div>
+      </div>
+      <div className="space_desktop_form">
+        <div className="fixed_form" id={form.id}>
+          <TRForm />
         </div>
       </div>
     </div>

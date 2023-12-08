@@ -7,6 +7,5 @@ interface Params {
 }
 
 export function GET(request: Object, { params }: Params) {
-  console.log(params);
   return NextResponse.json({ sda: "GET world" });
 }

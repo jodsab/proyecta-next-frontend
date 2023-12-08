@@ -13,7 +13,7 @@ const ICON_SIZE = 40;
 
 const TRNavigation = () => {
   const [toggleDrawer, setToggleDrawer] = useState(false);
-  const { gallery, joinUs, location, tour360, weHave } = homeScroll;
+  const { gallery, joinUs, location, tour360, weHave, form } = homeScroll;
 
   const MenuButton = ({ data }: any) => {
     return (
@@ -40,10 +40,21 @@ const TRNavigation = () => {
     <div className="tr_navigation_container">
       <div className="tr_navigation">
         <Image className="logo" src={Logo} alt="logo" />
-        <button className="button" type="button">
-          <p className="bold">Solicitar información</p>
-        </button>
+        <div>
+          <Link
+            activeClass="active"
+            to={form.id}
+            smooth
+            spy
+            duration={500}
+            offset={-60}
+          >
+            <button className="button">
+              <p className="bold">Solicitar información</p>
+            </button>
 
+          </Link>
+        </div>
         <Button onClick={() => setToggleDrawer(!toggleDrawer)}>
           <BiMenu size={ICON_SIZE} />
         </Button>

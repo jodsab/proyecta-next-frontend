@@ -23,6 +23,11 @@ const homeScroll = {
         id: 'scroll_joinUs',
         label: '¡Únete a nuestra familia!',
         button: 'Nuestro clientes'
+    },
+    form: {
+        id: 'scroll_form',
+        label: 'Registrate',
+        button: 'Solicitar información'
     }
 }
 

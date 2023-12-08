@@ -22,14 +22,11 @@ import "./styles.scss";
 
 SwiperCore.use([Pagination, Navigation]);
 
-const SVG_ICONS = 80;
+const SVG_ICONS = 50;
 
 const Comentario = () => {
   return (
     <div className="comentario_container">
-      <div className="coment_div">
-        <p className="bold mediumText comentarios">Comentarios</p>
-      </div>
       <div className="message_align">
         <div className="message_container">
           <Image
@@ -69,23 +66,27 @@ const TRComentarios = () => {
   ].map((img, id) => ({ id: id + 1, img }));
   return (
     <div className="trcomentarios_container">
-      <p className="bigText bold joinus">¡Únete a nuestra familia!</p>
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{ delay: 3000 }}
-        className="mySwiper"
-      >
-        {galleryFamily?.map((gf, index) => (
-          <SwiperSlide key={index}>
-            <Comentario />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <p className="bigText bold joinus">Comentarios</p>
+      <div className="swiper_desktop_container">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{ delay: 5000 }}
+          grabCursor={true}
+          className="mySwiper"
+        >
+          {galleryFamily?.map((gf, index) => (
+            <SwiperSlide key={index}>
+              <Comentario />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
     </div>
   );
 };

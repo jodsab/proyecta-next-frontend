@@ -1,7 +1,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import cliente1 from "../../../assets/galeriaclientes/cliente1.png";
 import cliente2 from "../../../assets/galeriaclientes/cliente2.png";
@@ -18,7 +18,7 @@ import "swiper/css/navigation";
 import "swiper/swiper-bundle.css";
 import "./styles.scss";
 
-SwiperCore.use([Pagination, Navigation]);
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 const SwiperFamily = ({ src }: any) => {
   return (
@@ -26,6 +26,10 @@ const SwiperFamily = ({ src }: any) => {
       alt="swiper container"
       className="swiperfamily_container"
       src={src}
+      width={0}
+      height={0}
+      sizes="100vw"
+      style={{ width: '100%', height: '700px' }}
       loading="lazy"
     />
   );
@@ -56,7 +60,10 @@ const TRFamilys = () => {
         pagination={{
           clickable: true,
         }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false, // Esto permite que el autoplay continúe incluso después de interactuar con el carrusel.
+        }}
         className="mySwiper"
       >
         {galleryFamily?.map((gf, index) => (

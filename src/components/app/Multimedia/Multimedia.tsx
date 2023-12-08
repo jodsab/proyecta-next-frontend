@@ -15,8 +15,7 @@ const TRMultimedia = () => {
         <iframe
           title="Kuula Embed"
           src={iframeSrc}
-          width="100%"
-          height="600px" /* Puedes ajustar la altura según tus necesidades */
+          className="iframe_kuula"
           frameBorder="0"
           allowFullScreen
         ></iframe>

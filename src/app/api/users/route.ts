@@ -4,9 +4,12 @@ export function GET() {
   return NextResponse.json({ sda: "GET world" });
 }
 
-export function POST() {
-  return NextResponse.json({ sda: "POST world" });
+export async function POST(request) {
+  const data = await request.json();
+
+
 }
+
 
 export function PUT() {
   return NextResponse.json({ sda: "PUT world" });

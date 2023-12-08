@@ -1,6 +1,10 @@
 @import "../../../resources/colors.scss";
+@import "../../../resources/mediaQueries.scss";
 
 .trcard_container {
+  max-width: 450px;
+  box-shadow: rgba(1, 1, 1, 0.2) 0px 0px 14px;
+  border-radius: 20px;
   .social_icons {
     text-align: center;
     display: flex;
@@ -8,7 +12,9 @@
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
-    .visit_us{
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    .visit_us {
       margin-top: 12px;
       color: $primary-600;
     }
@@ -40,7 +46,9 @@
       display: flex;
       justify-content: space-evenly;
       gap: 10px;
-      padding: 10px;
+      padding: 10px 0;
+      background-color: white;
+      border-radius: 20px 20px 0 0;
 
       .primaryColor {
         color: $primary-700;
@@ -54,7 +62,7 @@
       background: linear-gradient($primary-400, $primary-100);
       padding: 18px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       .flex_body_left {
         display: flex;
         flex-direction: column;
@@ -71,6 +79,16 @@
           width: 70%;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .trcard_container {
+    width: 450px;
+    .card_header,
+    .social_icons {
+      width: 100%;
     }
   }
 }
