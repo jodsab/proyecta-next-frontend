@@ -12,18 +12,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./styles.scss";
 
-import lote1 from "../../../assets/galerialotes/lote1.jpeg";
-import lote2 from "../../../assets/galerialotes/lote2.jpeg";
-import lote3 from "../../../assets/galerialotes/lote3.jpeg";
-import lote4 from "../../../assets/galerialotes/lote4.jpeg";
-import lote5 from "../../../assets/galerialotes/lote5.jpeg";
-import lote6 from "../../../assets/galerialotes/lote6.jpeg";
-import lote7 from "../../../assets/galerialotes/lote7.jpeg";
-import lote8 from "../../../assets/galerialotes/lote8.jpeg";
-import lote9 from "../../../assets/galerialotes/lote9.jpeg";
-import lote10 from "../../../assets/galerialotes/lote10.jpeg";
-import lote11 from "../../../assets/galerialotes/lote11.jpeg";
-import lote12 from "../../../assets/galerialotes/lote12.jpeg";
+import lote1 from "../../../assets/galerialotes/lote1.webp";
+import lote2 from "../../../assets/galerialotes/lote2.webp";
+import lote3 from "../../../assets/galerialotes/lote3.webp";
+import lote4 from "../../../assets/galerialotes/lote4.webp";
+import lote5 from "../../../assets/galerialotes/lote5.webp";
+import lote6 from "../../../assets/galerialotes/lote6.webp";
+import lote7 from "../../../assets/galerialotes/lote7.webp";
+import lote8 from "../../../assets/galerialotes/lote8.webp";
+import lote9 from "../../../assets/galerialotes/lote9.webp";
+import lote10 from "../../../assets/galerialotes/lote10.webp";
+import lote11 from "../../../assets/galerialotes/lote11.webp";
+import lote12 from "../../../assets/galerialotes/lote12.webp";
 
 // import required modules
 import SwiperCore from "swiper";

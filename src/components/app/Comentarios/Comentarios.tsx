@@ -5,13 +5,13 @@ import { Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import profile_picture from "../../../assets/defaultuserprofile.jpg";
-import cliente1 from "../../../assets/galeriaclientes/cliente1.png";
-import cliente2 from "../../../assets/galeriaclientes/cliente2.png";
-import cliente3 from "../../../assets/galeriaclientes/cliente3.png";
-import cliente4 from "../../../assets/galeriaclientes/cliente4.png";
-import cliente5 from "../../../assets/galeriaclientes/cliente5.png";
-import cliente6 from "../../../assets/galeriaclientes/cliente6.png";
-import cliente7 from "../../../assets/galeriaclientes/cliente7.png";
+import cliente1 from "../../../assets/galeriaclientes/cliente1.webp";
+import cliente2 from "../../../assets/galeriaclientes/cliente2.webp";
+import cliente3 from "../../../assets/galeriaclientes/cliente3.webp";
+import cliente4 from "../../../assets/galeriaclientes/cliente4.webp";
+import cliente5 from "../../../assets/galeriaclientes/cliente5.webp";
+import cliente6 from "../../../assets/galeriaclientes/cliente6.webp";
+import cliente7 from "../../../assets/galeriaclientes/cliente7.webp";
 
 // Import Swiper styles
 import "swiper/css";

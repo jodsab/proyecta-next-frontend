@@ -1,9 +1,9 @@
 export default class Api {
-  static get(URL) {
+  static get(URL: string) {
     return fetch(URL, { method: "GET" });
   }
 
-  static post(URL, data) {
+  static post(URL: string, data: any) {
     return fetch(URL, {
       method: "POST",
       headers: {

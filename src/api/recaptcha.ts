@@ -3,7 +3,7 @@ import Api from "./Api";
 
 export default class RecaptchaService {
 
-  static async tryCaptcha(data) {
+  static async tryCaptcha(data: string) {
     try {
       const rsp = await Api.post(`${BASE_URL}/recaptcha`, data);
       const rspJson = await rsp.json();

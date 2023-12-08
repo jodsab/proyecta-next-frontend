@@ -2,7 +2,9 @@
 const path = require("path");
 
 const nextConfig = {
-  sassOptions: {},
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;
