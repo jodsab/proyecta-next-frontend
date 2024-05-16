@@ -1,0 +1,208 @@
+@import "../../resources/colors.scss";
+@import "../../resources/mediaQueries.scss";
+
+$width-content: 60%;
+$width-content-tablet: 90%;
+
+.__className_fca34a {
+  margin: 0;
+}
+
+.libroDeReclamaciones_container {
+  margin-bottom: 40px;
+  .logo_container {
+    height: 70px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+    .img_container {
+      width: $width-content;
+      margin: auto;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      img {
+        width: auto;
+        max-height: 55px;
+      }
+    }
+  }
+
+  .libroDeReclamaciones_content {
+    width: $width-content;
+    margin: auto;
+
+    p.title_center {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .form_section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h2.hoja_de_reclamaciones {
+        font-size: 30px;
+        color: $secondary;
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
+
+    .area {
+      background-color: $primary-300;
+      padding: 5px 25px;
+      strong {
+        margin-right: 5px;
+      }
+    }
+
+    .flex_form_reclamaciones {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .inactive_section {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 50px;
+      .form_flex_inactive {
+        display: flex;
+        gap: 25px;
+        .input_field {
+          flex: 1;
+        }
+      }
+    }
+
+    p.header_section {
+      color: $secondary;
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .captcha_container {
+      display: flex;
+      justify-content: center;
+      margin: 40px;
+    }
+
+    .submit_container {
+      display: flex;
+      justify-content: center;
+      button.submit_button {
+        background-color: $secondary;
+        color: white;
+        border: 0;
+        border-radius: 6px;
+        padding: 10px 45px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button.submit_button:hover {
+        background-color: $primary;
+      }
+    }
+
+    .checkbox_container {
+      display: flex;
+      gap: 2px;
+    }
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .libroDeReclamaciones_container {
+    .logo_container {
+      .img_container {
+        width: $width-content-tablet;
+        img {
+        }
+      }
+    }
+
+    .libroDeReclamaciones_content {
+      width: $width-content-tablet;
+      margin: auto;
+      .form_section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h2.hoja_de_reclamaciones {
+          font-size: 30px;
+          color: $secondary;
+          text-align: center;
+          margin: 0;
+        }
+      }
+
+      .area {
+        background-color: $primary-300;
+        padding: 5px 25px;
+        strong {
+          margin-right: 5px;
+        }
+      }
+
+      .flex_form_reclamaciones {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .inactive_section {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        .form_flex_inactive {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+        }
+      }
+
+      p.header_section {
+        color: $secondary;
+        font-weight: bold;
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+
+      .captcha_container {
+        display: flex;
+        justify-content: center;
+        margin: 40px;
+      }
+
+      .submit_container {
+        display: flex;
+        justify-content: center;
+        button.submit_button {
+          background-color: $secondary;
+          color: white;
+          border: 0;
+          border-radius: 6px;
+          padding: 10px 45px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        button.submit_button:hover {
+          background-color: $primary;
+        }
+      }
+
+      .checkbox_container {
+        display: flex;
+        gap: 2px;
+      }
+    }
+  }
+}

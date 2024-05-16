@@ -2,11 +2,8 @@ import Link from "next/link";
 import { Roboto } from "next/font/google";
 
 export const metadata = {
-  title: "Proyecta Innova TR SAC",
-  description: "Inmobiliaria Proyecta Innova TR SAC",
-  icons: {
-    icon: '/logo.png', // /public path
-  },
+  title: "Bosque Alto - Proyecta Innova TR SAC",
+  description: "El proyecto Bosque Alto de Inmobiliaria Proyecta Innova TR SAC",
 };
 
 const roboto = Roboto({

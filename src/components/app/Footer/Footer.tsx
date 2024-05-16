@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../../../assets/logo.png";
+import Link from "next/link";
+import { ROUTER } from '../../../shared/routes';
 import { HiOutlineBookOpen } from "react-icons/hi";
 import "./styles.scss";
 
@@ -21,8 +23,10 @@ const TRFooter = () => {
         </div>
 
         <div className="book">
-          <HiOutlineBookOpen size={35} />
-          <p className="mediumText">Libro de reclamaciones</p>
+          <Link href={`/${ROUTER.libroDeReclamaciones}`} target="_blank">
+            <HiOutlineBookOpen size={25} />
+            <p>Libro de reclamaciones</p>
+          </Link>
         </div>
       </div>
     </div>
