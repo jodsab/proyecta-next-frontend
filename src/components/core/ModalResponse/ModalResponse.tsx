@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal, Result } from 'antd';
-
-interface IModalResponseProps {
-  status: any;
-  tittle: string,
-  subTitle: string,
-  isModalOpen: boolean,
-  setIsModalOpen: (e: boolean) => void,
-}
+import { IModalResponseProps } from '@/types/Resend/modalResponse';
 
 const ModalResponse: React.FC<IModalResponseProps> = ({ status, tittle, isModalOpen, setIsModalOpen, subTitle }) => {
 

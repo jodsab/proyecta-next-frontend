@@ -102,19 +102,22 @@
         color: "red";
       }
 
-      .submit_button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
+      .button_super {
         background-color: $primary;
         color: white;
         border: 0;
         cursor: pointer;
       }
-      .submit_button:hover {
+      .button_super:hover {
         background-color: $orange;
         color: $primary;
+      }
+
+      .submit_button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
       }
     }
   }
