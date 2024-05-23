@@ -4,8 +4,8 @@ import Image from "next/image";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { homeScroll } from "@/shared/scrolls";
 import { Drawer, Button } from "antd";
-import { TiThMenu } from "react-icons/ti";
-import { IoClose } from "react-icons/io5";
+import { LuMenu } from "react-icons/lu";
+import { IoCloseOutline } from "react-icons/io5";
 import {
   AiFillFacebook,
   AiOutlineInstagram,
@@ -74,7 +74,7 @@ const TRNavigation = () => {
         <div className="mobile_content">
           <button className="toggle_button" onClick={showDrawer}>
             {
-              open ? <IoClose size={40} color="#4760d2" /> : <TiThMenu size={34} color="#4760d2" />
+              open ? <IoCloseOutline size={40} color="#4760d2" /> : <LuMenu size={34} color="#4760d2" />
             }
           </button>
           <Drawer title="Basic Drawer" onClose={onClose} open={open}>
