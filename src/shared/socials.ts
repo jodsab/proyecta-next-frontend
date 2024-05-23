@@ -5,3 +5,5 @@ const SOCIAL_NETWORKS = {
   youtube: "https://www.youtube.com/@ProyectaInnovaTrInmobiliaria",
   whatsapp: "https://api.whatsapp.com/send?phone=51922199903&text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20los%20lotes%20campestres%20en%20Huacho."
 }
+
+export { SOCIAL_NETWORKS }

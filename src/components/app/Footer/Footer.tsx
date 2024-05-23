@@ -13,14 +13,14 @@ const TRFooter = () => {
         <Image alt="logo" src={logo} />
       </div>
       <div>
-        <p>¿Quieres estar al tanto de nuestras promociones?</p>
+        {/*         <p>¿Quieres estar al tanto de nuestras promociones?</p>
         <p>¡Suscríbete!</p>
         <div className="subscribe">
           <input placeholder="Escribe tu email aquí" />
           <button>
             <p className="bold mediumText">Suscribirme</p>
           </button>
-        </div>
+        </div> */}
 
         <div className="book">
           <Link href={`/${ROUTER.libroDeReclamaciones}`} target="_blank">

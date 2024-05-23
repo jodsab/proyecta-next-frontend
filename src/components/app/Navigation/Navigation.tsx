@@ -1,19 +1,35 @@
 "use client";
 import { useState } from "react";
-import { BiMenu } from "react-icons/bi";
 import Image from "next/image";
-import { Button, Drawer } from "@mui/material";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { homeScroll } from "@/shared/scrolls";
+import { Drawer, Button } from "antd";
+import { TiThMenu } from "react-icons/ti";
+import { IoClose } from "react-icons/io5";
+import {
+  AiFillFacebook,
+  AiOutlineInstagram,
+  AiFillYoutube,
+} from "react-icons/ai";
+import { BsWhatsapp } from "react-icons/bs";
+import { FaTiktok } from "react-icons/fa";
+import { SOCIAL_NETWORKS } from "@/shared/socials";
 import Logo from "../../../assets/logo.png";
-import BosqueAltoLogo from "../../../assets/bosquealto.png";
 import "./styles.scss";
-
-const ICON_SIZE = 40;
+const SVGSIZE = 19;
+const SVGSIZE_MOBILE = 22;
 
 const TRNavigation = () => {
-  const [toggleDrawer, setToggleDrawer] = useState(false);
   const { gallery, joinUs, location, tour360, weHave, form } = homeScroll;
+  const [open, setOpen] = useState(false);
+
+  const showDrawer = () => {
+    setOpen(!open);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
 
   const MenuButton = ({ data }: any) => {
     return (
@@ -25,10 +41,10 @@ const TRNavigation = () => {
         duration={500}
         offset={-80}
       >
-        <div onClick={() => setToggleDrawer(false)}>
+        <div onClick={() => setOpen(false)}>
           <li>
             <button className="item_button">
-              <p className="bold">{data.button}</p>
+              <p>{data.button}</p>
             </button>
           </li>
         </div>
@@ -40,7 +56,7 @@ const TRNavigation = () => {
     <div className="tr_navigation_container">
       <div className="tr_navigation">
         <Image className="logo" src={Logo} alt="logo" />
-        <div>
+        {/*         <div>
           <Link
             activeClass="active"
             to={form.id}
@@ -54,25 +70,55 @@ const TRNavigation = () => {
             </button>
 
           </Link>
-        </div>
-        <Button onClick={() => setToggleDrawer(!toggleDrawer)}>
-          <BiMenu size={ICON_SIZE} />
-        </Button>
-
-        <Drawer
-          anchor={"right"}
-          open={toggleDrawer}
-          onClose={() => setToggleDrawer(!toggleDrawer)}
-        >
-          <div className="phone_menu_container">
-            <div className="logo_ba_container">
-              <Image
-                className="bosqueAlto_logo"
-                src={BosqueAltoLogo}
-                alt="Logo Bosque Alto El progreso"
-              />
+        </div> */}
+        <div className="mobile_content">
+          <button className="toggle_button" onClick={showDrawer}>
+            {
+              open ? <IoClose size={40} color="#4760d2" /> : <TiThMenu size={34} color="#4760d2" />
+            }
+          </button>
+          <Drawer title="Basic Drawer" onClose={onClose} open={open}>
+            <div className="navigation-bar__content">
+              <div className="navigation-bar__ul">
+                <ul className="buttons">
+                  <MenuButton data={location} />
+                  <MenuButton data={weHave} />
+                  <MenuButton data={gallery} />
+                  <MenuButton data={joinUs} />
+                  <MenuButton data={tour360} />
+                </ul>
+              </div>
+              <div className="social_icons">
+                <div className="icons_container">
+                  <a href={SOCIAL_NETWORKS.facebook} target="_blank">
+                    <AiFillFacebook size={SVGSIZE_MOBILE} />
+                  </a>
+                  <a
+                    href={SOCIAL_NETWORKS.instagram}
+                    target="_blank"
+                  >
+                    <AiOutlineInstagram size={SVGSIZE_MOBILE} />
+                  </a>
+                  <a href={SOCIAL_NETWORKS.tiktok} target="_blank">
+                    <FaTiktok size={SVGSIZE_MOBILE} />
+                  </a>
+                  <a href={SOCIAL_NETWORKS.whatsapp} target="_blank">
+                    <BsWhatsapp size={SVGSIZE_MOBILE} />
+                  </a>
+                  <a
+                    href={SOCIAL_NETWORKS.youtube}
+                    target="_blank"
+                  >
+                    <AiFillYoutube size={SVGSIZE_MOBILE} />
+                  </a>
+                </div>
+              </div>
             </div>
-            <div>
+          </Drawer>
+        </div>
+        <div className="desktop_content">
+          <div className="navigation-bar__content">
+            <div className="navigation-bar__ul">
               <ul className="buttons">
                 <MenuButton data={location} />
                 <MenuButton data={weHave} />
@@ -81,8 +127,33 @@ const TRNavigation = () => {
                 <MenuButton data={tour360} />
               </ul>
             </div>
+            <div className="social_icons">
+              <div className="icons_container">
+                <a href={SOCIAL_NETWORKS.facebook} target="_blank">
+                  <AiFillFacebook size={SVGSIZE} />
+                </a>
+                <a
+                  href={SOCIAL_NETWORKS.instagram}
+                  target="_blank"
+                >
+                  <AiOutlineInstagram size={SVGSIZE} />
+                </a>
+                <a href={SOCIAL_NETWORKS.tiktok} target="_blank">
+                  <FaTiktok size={SVGSIZE} />
+                </a>
+                <a href={SOCIAL_NETWORKS.whatsapp} target="_blank">
+                  <BsWhatsapp size={SVGSIZE} />
+                </a>
+                <a
+                  href={SOCIAL_NETWORKS.youtube}
+                  target="_blank"
+                >
+                  <AiFillYoutube size={SVGSIZE} />
+                </a>
+              </div>
+            </div>
           </div>
-        </Drawer>
+        </div>
       </div>
     </div>
   );
