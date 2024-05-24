@@ -12,8 +12,13 @@ import TRComentarios from "@/components/app/Comentarios/Comentarios";
 import TRFamilys from "@/components/app/Familys/Familys";
 import TRFooter from "@/components/app/Footer/Footer";
 import { homeScroll } from "@/shared/scrolls";
+import ReactGA from "react-ga";
 
 import "./index.scss";
+
+const REACT_GA = process.env.NEXT_REACT_GA || 'G-5GC3ZP8KT5';
+
+ReactGA.initialize(REACT_GA);
 
 export default function HomePage() {
   const { location, weHave, gallery, tour360, joinUs, form } = homeScroll;

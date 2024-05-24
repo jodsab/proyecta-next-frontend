@@ -6,6 +6,7 @@ import { homeScroll } from "@/shared/scrolls";
 import { Drawer, Button } from "antd";
 import { LuMenu } from "react-icons/lu";
 import { IoCloseOutline } from "react-icons/io5";
+import useAnalyticsEventTracker from "@/hooks/reactGA.hook";
 import {
   AiFillFacebook,
   AiOutlineInstagram,
@@ -23,7 +24,10 @@ const TRNavigation = () => {
   const { gallery, joinUs, location, tour360, weHave, form } = homeScroll;
   const [open, setOpen] = useState(false);
 
+  const gaEventTracker = useAnalyticsEventTracker('Open Menu');
+
   const showDrawer = () => {
+    gaEventTracker('Toggle Drawer')
     setOpen(!open);
   };
 
