@@ -20,7 +20,8 @@ export default function HomePage() {
   return (
     <div className="homepage_container">
       <TRNavigation />
-      <div className="portada_mobile_container">
+      {/* <iframe style={{ width: '100%', height: '1500px' }} src="https://player.vimeo.com/video/842527615?h=288624a18b&autoplay=1&background=1&texttrack=1&loop=1&muted=1&title=0&byline=0&portrait=0&speed=0&badge=0&autopause=0&player_id=0&app_id=58479"></iframe>
+       */}<div className="portada_mobile_container">
         <TRPortada />
       </div>
       <div className="home_content">
