@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import TRNavigation from "@/components/app/Navigation/Navigation";
 import TRPortada from "@/components/app/Portada/Portada";
 import TRCard from "@/components/app/Card/Card";
@@ -25,6 +26,10 @@ ReactGA.initialize(REACT_GA);
 
 export default function HomePage() {
   const { location, weHave, gallery, tour360, joinUs, form } = homeScroll;
+
+  useEffect(() => {
+    Aos.init();
+  }, [])
   return (
     <div className="homepage_container">
       <TRNavigation />
@@ -71,7 +76,7 @@ export default function HomePage() {
         </div>
 
 
-        <div className="form_space_mobile_container">
+        <div className="form_space_mobile_container" data-aos="fade-left">
           <div className="space_desktop_form" id={form.id}>
             <TRForm />
           </div>
