@@ -1,0 +1,13 @@
+@import "../../../resources/mediaQueries.scss";
+
+.swiperfamily_container {
+  width: 100%;
+  height: 800px;
+}
+
+@media screen and (min-width: $desktop) {
+  .swiperfamily_container {
+    width: 100%;
+    height: 800px;
+  }
+}

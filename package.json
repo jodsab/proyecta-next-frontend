@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.14",
     "antd": "^5.10.1",
+    "aos": "^2.3.4",
     "formik": "^2.4.6",
     "mysql2": "^3.6.5",
     "next": "^13.5.4",
@@ -27,6 +28,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
