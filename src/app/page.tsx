@@ -15,9 +15,9 @@ import TRFooter from "@/components/app/Footer/Footer";
 import { homeScroll } from "@/shared/scrolls";
 import sticker from '../assets/home/sticker.png';
 import Image from "next/image";
-import Aos from 'aos';
+import Aos from "aos";
 import ReactGA from "react-ga";
-
+import "aos/dist/aos.css";
 import "./index.scss";
 
 const REACT_GA = process.env.NEXT_REACT_GA || 'G-5GC3ZP8KT5';
@@ -34,7 +34,7 @@ export default function HomePage() {
     <div className="homepage_container">
       <TRNavigation />
       <div className="new_portada">
-        <div className="lotes_container">
+        <div className="lotes_container" data-aos="fade-right">
           <Image alt="sticker" className="lotes" src={sticker} />
         </div>
         <div className='iframe__container'>
