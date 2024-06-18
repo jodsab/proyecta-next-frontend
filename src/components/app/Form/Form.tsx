@@ -7,6 +7,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import TRCaptcha from "@/components/core/Captcha/Captcha";
 import RecaptchaService from '../../../api/recaptcha'
 import ResendService from "@/api/resend";
+import HubSpotService from "@/api/hubspot";
 import validationSchema from './validationSchema';
 import { formatDate } from "@/shared/functions/formatDates";
 import "./styles.scss";
@@ -23,6 +24,10 @@ const RESPONSES = {
   resendError: {
     status: "warning",
     subTitle: "Hubo un error al registrarte relacionado con el servicio de mensajería, es posible que la mensajería no esté disponible."
+  },
+  hubSpotError: {
+    status: "warning",
+    subTitle: "Existe un error relacionado a HubSpot, es posible que tu usuario ya se encuentre registrado en nuestra base de datos"
   }
 }
 
@@ -41,19 +46,23 @@ const TRForm = () => {
       setLoading(true);
       const rsp = await validarCaptcha(human);
       if (rsp.success) {
-        const rsp = await ResendService.sendFormRegistro(values);
-        if (!rsp.error) {
-          console.log('correcto')
-          setModalInfo(RESPONSES.valid)
+        const rspHubSpot = await HubSpotService.newContact({ properties: { email: values.email, firsName: values.nombre, lastname: values.apellido, phone: values.telefono, company: "Innova WEB", website: "https://www.inmobiliariaproyectainnova.com/", lifecyclestage: "lead" } })
+        if (rspHubSpot.status === 'error') {
+          setModalInfo(RESPONSES.hubSpotError)
         } else {
-          setModalInfo(RESPONSES.resendError)
+          const rsp = await ResendService.sendFormRegistro(values);
+          if (!rsp.error) {
+            setModalInfo(RESPONSES.valid)
+          } else {
+            setModalInfo(RESPONSES.resendError)
+          }
         }
       } else {
         setModalInfo(RESPONSES.captchaError);
       }
       setIsModalOpen(true)
     } catch (error) {
-
+      console.log("error", error)
     } finally {
       setLoading(false);
     }

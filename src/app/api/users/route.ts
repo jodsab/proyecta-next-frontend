@@ -6,5 +6,4 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   const data = await request.json();
-  console.log('dsadsa', data)
 }

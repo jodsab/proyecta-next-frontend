@@ -70,7 +70,7 @@ const TRGallery = () => {
               src="https://www.youtube.com/embed/mjz6o_cwL7E"
               title="Proyecto Bosque Alto - Recorrido 3D"
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; xr-spatial-tracking"
               allowFullScreen
             ></iframe>
           </div>

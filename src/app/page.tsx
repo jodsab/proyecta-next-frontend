@@ -38,7 +38,7 @@ export default function HomePage() {
           <Image alt="sticker" className="lotes" src={sticker} />
         </div>
         <div className='iframe__container'>
-          <iframe className="iframe__content" src="https://player.vimeo.com/video/842527615?h=288624a18b&autoplay=1&background=1&texttrack=1&loop=1&muted=1&title=0&byline=0&portrait=0&speed=0&badge=0&autopause=0&player_id=0&app_id=58479"></iframe>
+          <iframe className="iframe__content" src="https://player.vimeo.com/video/842527615?h=288624a18b&autoplay=1&background=1&texttrack=1&loop=1&muted=1&title=0&byline=0&portrait=0&speed=0&badge=0&autopause=0&player_id=0&app_id=58479" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
         <div className="card_desktop_container">
           <TRCard />

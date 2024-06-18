@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: 'Proyecta Innova TR SAC - Registro <admin@inmobiliariaproyectainnova.com>',
-      to: ['camilo.b.q@hotmail.com', 'radsance.pe@gmail.com'],
+      to: ['camilo.b.q@hotmail.com'],
       subject: 'Registro',
       react: RegistrosTemplate({
         fecha,
