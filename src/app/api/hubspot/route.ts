@@ -18,6 +18,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify(requestJson),
     });
     const hubspotResponse = await response.json();
+    console.log('hubspotResponse', hubspotResponse)
     return NextResponse.json(hubspotResponse);
   } catch (error) {
     console.error('Error:', error);
