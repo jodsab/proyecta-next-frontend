@@ -46,7 +46,7 @@ const TRForm = () => {
       setLoading(true);
       const rsp = await validarCaptcha(human);
       if (rsp.success) {
-        const rspHubSpot = await HubSpotService.newContact({ properties: { email: values.email, firsName: values.nombre, lastname: values.apellido, phone: values.telefono, company: "Innova WEB", website: "https://www.inmobiliariaproyectainnova.com/", lifecyclestage: "lead" } })
+        const rspHubSpot = await HubSpotService.newContact({ properties: { email: values.email, firstname: values.nombre, lastname: values.apellido, phone: values.telefono, company: "Innova WEB", website: "https://www.inmobiliariaproyectainnova.com/", lifecyclestage: "lead" } })
         if (rspHubSpot.status === 'error') {
           setModalInfo(RESPONSES.hubSpotError)
         } else {
