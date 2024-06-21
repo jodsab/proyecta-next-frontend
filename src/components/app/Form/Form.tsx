@@ -97,7 +97,6 @@ const TRForm = () => {
                   nombre: "",
                   apellido: "",
                   email: "",
-                  DNI: "",
                   telefono: "",
                   terms: false,
                   politics: false,
@@ -145,19 +144,6 @@ const TRForm = () => {
                         </div>
                         {errors.email && touched.email ? (
                           <ErrorMessage error={errors.email} />
-                        ) : null}
-                      </div>
-                      <div className="labels_and_errors">
-                        <div className="names">
-                          <Field
-                            className="input_field"
-                            id="DNI"
-                            name="DNI"
-                            placeholder="DNI/CE"
-                          />
-                        </div>
-                        {errors.DNI && touched.DNI ? (
-                          <ErrorMessage error={errors.DNI} />
                         ) : null}
                       </div>
                       <div className="labels_and_errors">

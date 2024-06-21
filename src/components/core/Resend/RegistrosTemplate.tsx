@@ -6,7 +6,6 @@ export const RegistrosTemplate: React.FC<IFormRegistro> = ({
   nombre,
   apellido,
   email,
-  DNI,
   telefono,
   terms,
   politics,
@@ -15,7 +14,6 @@ export const RegistrosTemplate: React.FC<IFormRegistro> = ({
     <p>Fecha: {fecha}</p>
     <p>Nombres: {nombre}</p>
     <p>Apellidos: {apellido}</p>
-    <p>DNI/CE: {DNI}</p>
     <p>Telefono: {telefono}</p>
     <p>Email: {email}</p>
     <p>Acepta términos y condiciones: {terms ? 'Si' : 'No'}</p>

@@ -4,7 +4,6 @@ interface IFormReclamo {
   nombres: string,
   apellidoPaterno: string,
   apellidoMaterno: string,
-  dni: string,
   telefono: string,
   domicilio: string,
   email?: string,

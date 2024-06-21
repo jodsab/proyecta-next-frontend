@@ -7,7 +7,6 @@ export const ReclamacionesTemplate: React.FC<IFormReclamo> = ({
   nombres,
   apellidoPaterno,
   apellidoMaterno,
-  dni,
   telefono,
   domicilio,
   email,
@@ -27,7 +26,6 @@ export const ReclamacionesTemplate: React.FC<IFormReclamo> = ({
     <p>Nombres: {nombres}</p>
     <p>Apellido Paterno: {apellidoPaterno}</p>
     <p>Apellido Materno: {apellidoMaterno}</p>
-    <p>DNI/CE: {dni}</p>
     <p>Telefono: {telefono}</p>
     <p>Domicilio: {domicilio}</p>
     <p>Email: {email}</p>
