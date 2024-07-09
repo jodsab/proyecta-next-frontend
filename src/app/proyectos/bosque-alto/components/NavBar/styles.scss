@@ -1,0 +1,220 @@
+@import "../../../../../resources/colors.scss";
+@import "../../../../../resources/mediaQueries.scss";
+
+.bosqueAlto_navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: $sixth;
+  z-index: 9999999;
+
+  .desktop_content {
+    display: none;
+  }
+
+  .tr_navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    height: 70px;
+
+    .logo {
+      padding-left: 5px;
+      max-height: 85%;
+      width: 120px;
+      object-fit: contain;
+    }
+
+    .button {
+      background-color: $secondary;
+      width: 100%;
+      border: 0;
+      border-radius: 22px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: $primary;
+    }
+    .navigation-bar__ul {
+      ul {
+        a {
+          div {
+            li {
+            }
+          }
+          button.item_button {
+            p {
+              font-size: 18px;
+              color: $fourth;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobile_content {
+    display: flex;
+    button.toggle_button {
+      border: 0;
+      background-color: transparent;
+      padding-right: 14px;
+    }
+  }
+}
+
+.ant-drawer-content-wrapper {
+  width: 50% !important;
+}
+
+.ant-drawer {
+  .ant-drawer-body {
+    padding: 0;
+    padding-top: 13px;
+    .navigation-bar__content {
+      .navigation-bar__ul {
+        ul.buttons {
+          a {
+            li {
+              button {
+                background-color: $secondary;
+                color: white;
+                text-align: start;
+                padding: 15px;
+                width: 100%;
+                border: 0;
+                border-bottom: 1px solid white;
+                p {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .social_icons {
+    .icons_container {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 10px;
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .bosqueAlto_navigation {
+    height: 80px;
+    width: 100%;
+
+    .mobile_content {
+      display: none;
+    }
+    .desktop_content {
+      display: flex;
+      height: 100%;
+    }
+    .tr_navigation {
+      height: 80px;
+      box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+
+      .navigation-bar__content {
+        height: 100%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding-right: 20px;
+        .logo {
+          width: 220px;
+          height: 80px;
+        }
+        .button {
+          display: none;
+        }
+
+        .navigation-bar__ul {
+          height: 100%;
+          ul {
+            height: 100%;
+            display: flex;
+            a {
+              height: 100%;
+              div {
+                height: 100%;
+                li {
+                  height: 100%;
+                }
+              }
+              button.item_button {
+                height: 100%;
+                background-color: transparent;
+                border: 0;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .navigation-bar__ul {
+          height: 100%;
+          display: flex;
+          gap: 10px;
+        }
+
+        .navigation-bar__ul a {
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          padding: 0 15px; /* Espaciado interno de los enlaces */
+          text-decoration: none;
+          color: #333; /* Color del texto de los enlaces */
+          font-weight: bold;
+          transition: color 0.3s ease;
+        }
+
+        .navigation-bar__ul a:hover {
+          color: #007bff; /* Color del texto al hacer hover */
+        }
+
+        .navigation-bar__ul a::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: 4px; /* Altura de la barra */
+          width: 0;
+          background-color: $secondary; /* Color de la barra */
+          transition: width 0.3s ease;
+        }
+
+        .navigation-bar__ul a:hover::after {
+          width: 100%;
+          right: 0; /* Asegura que la barra crezca desde la derecha hacia la izquierda */
+        }
+
+        .social_icons {
+          .icons_container {
+            display: flex;
+            gap: 5px;
+            a {
+              padding: 5px;
+              color: $primary;
+            }
+            a:hover {
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

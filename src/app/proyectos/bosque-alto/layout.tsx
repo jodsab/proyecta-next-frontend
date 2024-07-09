@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Roboto } from "next/font/google";
+import { Roboto, Montserrat, Anton } from "next/font/google";
 
 export const metadata = {
   title: "Bosque Alto - Proyecta Innova TR SAC",
@@ -10,6 +10,21 @@ const roboto = Roboto({
   weight: ["300", "400", "700"],
   style: ["italic", "normal"],
   subsets: ["latin"],
+  variable: "--font-roboto"
+});
+
+const montserrat = Montserrat({
+  weight: ["300", "400", "700"],
+  style: ["italic", "normal"],
+  subsets: ["latin"],
+  variable: "--font-montserrat"
+});
+
+const anton = Anton({
+  weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+  variable: "--font-anton"
 });
 
 export default function RootLayout({
@@ -19,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={`${roboto.className} ${montserrat.className} ${anton.className}`}>{children}</body>
     </html>
   );
 }

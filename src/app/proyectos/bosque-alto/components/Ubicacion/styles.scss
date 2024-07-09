@@ -1,0 +1,202 @@
+@import "../../../../../resources/colors.scss";
+@import "../../../../../resources/mediaQueries.scss";
+
+.ubicacion_container {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  justify-items: center;
+  gap: 40px;
+  height: 850px;
+  width: 90%;
+  margin: auto;
+  .iframe_container_desktop {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    .iframe {
+      width: 100%;
+      height: 500px;
+    }
+    .img_absolute {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+    }
+  }
+  .iframe_container_mobile {
+    display: none;
+  }
+  .ubicacion_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    margin: auto;
+    .title {
+      width: 70%;
+      margin: auto;
+      text-align: center;
+      font-weight: bold;
+      font-size: 55px;
+      .blue {
+        color: $fourth;
+      }
+      .green {
+        color: $fifth;
+      }
+    }
+    .icons {
+      display: flex;
+      gap: 20px;
+      .spaces {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon_container {
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          height: 70px;
+          width: 70px;
+        }
+        .first {
+          background-color: $fifth;
+        }
+        .second {
+          background-color: $fourth;
+        }
+
+        .fullBlue {
+          color: $primary;
+          font-weight: bold;
+          margin-top: 30px;
+          margin-bottom: 20px;
+        }
+
+        .leftText {
+          color: white;
+          background-color: $fourth;
+          padding: 15px 25px;
+          text-align: center;
+          font-weight: bold;
+          width: 60%;
+          border-radius: 55px;
+        }
+
+        .rightText {
+          color: white;
+          background-color: $fifth;
+          padding: 15px 25px;
+          text-align: center;
+          font-weight: bold;
+          width: 60%;
+          border-radius: 55px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ubicacion_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    .iframe_container_desktop {
+      display: none;
+    }
+    .iframe_container_mobile {
+      display: block;
+      width: 100%;
+      margin: auto;
+      position: relative;
+      .iframe {
+        width: 100%;
+        height: 300px;
+      }
+      .img_absolute {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+      }
+    }
+    .ubicacion_info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin: auto;
+      .title {
+        width: 92%;
+        margin: auto;
+        text-align: center;
+        font-weight: bold;
+        font-size: 45px;
+        .blue {
+          color: $fourth;
+        }
+        .green {
+          color: $fifth;
+        }
+      }
+      .icons {
+        display: flex;
+        gap: 15px;
+        .spaces {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .icon_container {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            height: 70px;
+            width: 70px;
+          }
+          .first {
+            background-color: $fifth;
+          }
+          .second {
+            background-color: $fourth;
+          }
+
+          .fullBlue {
+            color: $primary;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+          }
+
+          .leftText {
+            color: white;
+            background-color: $fourth;
+            padding: 8px 12px;
+            text-align: center;
+            font-weight: bold;
+            width: 80%;
+            border-radius: 25px;
+          }
+
+          .rightText {
+            color: white;
+            background-color: $fifth;
+            padding: 8px 12px;
+            text-align: center;
+            font-weight: bold;
+            width: 80%;
+            border-radius: 25px;
+          }
+        }
+      }
+    }
+  }
+}

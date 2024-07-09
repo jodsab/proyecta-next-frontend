@@ -13,7 +13,26 @@
   src: url("../assets/avenir_ff/AvenirLTStd-Book.otf") format("truetype");
 }
 
+@font-face {
+  font-family: "anton";
+  src: url("../assets/anton/Anton-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../assets/montserrat/Montserrat-Black.ttf") format("truetype");
+}
+
 /* Puedes utilizar la fuente importada en tu estilo */
+
+.anton {
+  font-family: "anton";
+}
+
+.montserrat {
+  font-family: "montserrat";
+}
+
 .bold {
   font-family: "avenirBold";
 }

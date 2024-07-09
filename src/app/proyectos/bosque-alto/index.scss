@@ -1,0 +1,79 @@
+@import "../../../resources/globalStyles.scss";
+@import "../../../resources/mediaQueries.scss";
+@import "../../../resources/colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+.homepage_container {
+  width: 100%;
+  .home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .with_form {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      .form_absolute {
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        z-index: 999;
+        height: 90%;
+        .form_fixed {
+          position: sticky;
+          position: -webkit-sticky;
+          top: 20%;
+          width: 500px;
+        }
+      }
+
+      .content_form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .form_mobile_extra {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .homepage_container {
+    .form_fixed {
+      display: none;
+    }
+
+    .form_mobile_extra {
+      display: block;
+      width: 100%;
+      margin: 20px auto;
+    }
+  }
+}
