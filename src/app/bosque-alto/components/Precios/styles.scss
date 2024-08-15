@@ -1,0 +1,111 @@
+@import "../../../../resources/colors.scss";
+@import "../../../../resources/mediaQueries.scss";
+
+section.precios {
+  position: relative;
+  .img_portada {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transform: scaleX(-1);
+  }
+
+  .blue_area {
+    position: absolute;
+    background-color: rgba(56, 91, 157, 0.9);
+    border-radius: 15px;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    ul {
+      padding: 35px 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .metrajes_precios {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .m2_icon {
+        height: 35px;
+        object-fit: contain;
+      }
+
+      .lotes {
+        p {
+          color: white;
+          text-align: center;
+        }
+        .lote {
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .medida {
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+
+      .contado {
+        text-align: end;
+        background-color: #f7ad23;
+        padding: 6px 21px;
+        border-radius: 35px 35px 0 35px;
+        p {
+          color: #184b25;
+        }
+
+        .price {
+          font-weight: bold;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  section.precios {
+    .blue_area {
+      position: absolute;
+      background-color: rgba(56, 91, 157, 0.9);
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: calc(max-content + 100px);
+      max-width: 50%;
+      top: 0;
+      right: 0;
+      transform: translateX(-50%);
+
+      .metrajes_precios {
+        gap: 50px;
+
+        .lotes {
+          .lote {
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .medida {
+            font-size: 34px;
+            font-weight: bold;
+          }
+        }
+
+        .contado {
+          .price {
+            font-size: 45px;
+          }
+        }
+      }
+    }
+  }
+}

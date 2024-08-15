@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
-import { Button, Drawer, Radio, Space } from 'antd';
 import Image from "next/image";
 import { Link, animateScroll as scroll } from "react-scroll";
-import { homeScroll } from "@/shared/scrolls";
+import { bosqueAltoScroll } from "./scrolls";
+import { Drawer, Button } from "antd";
 import { LuMenu } from "react-icons/lu";
 import { IoCloseOutline } from "react-icons/io5";
-import { FaTree } from "react-icons/fa";
 import useAnalyticsEventTracker from "@/hooks/reactGA.hook";
+import { FaHome } from "react-icons/fa";
+import NextLink from "./Logo";
 import {
   AiFillFacebook,
   AiOutlineInstagram,
@@ -16,22 +17,22 @@ import {
 import { BsWhatsapp } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 import { SOCIAL_NETWORKS } from "@/shared/socials";
-import Logo from "../../../assets/logo.png";
-import NextLink from "@/app/bosque-alto/components/NavBar/Logo";
+import Logo from "./logo.png";
 
 import "./styles.scss";
 
 const SVGSIZE = 19;
 const SVGSIZE_MOBILE = 22;
 
-const TRNavigation = () => {
-  const { gallery, joinUs, location, tour360, weHave, form } = homeScroll;
+const NavBar = () => {
+  const { proyecta, precios, avances, recorrido, informacion, porque } =
+    bosqueAltoScroll;
   const [open, setOpen] = useState(false);
 
-  const gaEventTracker = useAnalyticsEventTracker('Open Menu');
+  const gaEventTracker = useAnalyticsEventTracker("Open Menu");
 
   const showDrawer = () => {
-    gaEventTracker('Toggle Drawer')
+    gaEventTracker("Toggle Drawer");
     setOpen(!open);
   };
 
@@ -39,7 +40,7 @@ const TRNavigation = () => {
     setOpen(false);
   };
 
-  const MenuButton = ({ data }: any) => {
+  const MenuButton = ({ data }) => {
     return (
       <Link
         activeClass="active"
@@ -61,32 +62,36 @@ const TRNavigation = () => {
   };
 
   return (
-    <div className="tr_navigation_container">
+    <div className="bosqueAlto_navigation">
       <div className="tr_navigation">
-        <Image className="logo" src={Logo} alt="logo" />
+        <NextLink href="/">
+          <Image className="logo" src={Logo} alt="logo" />
+        </NextLink>
         <div className="mobile_content">
           <button className="toggle_button" onClick={showDrawer}>
-            {
-              open ? <IoCloseOutline size={40} color="#4760d2" /> : <LuMenu size={34} color="#4760d2" />
-            }
+            {open ? (
+              <IoCloseOutline size={40} color="#4760d2" />
+            ) : (
+              <LuMenu size={34} color="#4760d2" />
+            )}
           </button>
           <Drawer title="Basic Drawer" onClose={onClose} open={open}>
             <div className="navigation-bar__content">
               <div className="navigation-bar__ul">
                 <ul className="buttons">
-                  <NextLink href='/bosque-alto'>
+                  <NextLink href="/">
                     <li>
-                      <button className="item_button bosquealto_btn">
-                        <FaTree />
-                        <p>Ir a Bosque Alto</p>
+                      <button className="item_button backhome">
+                        <FaHome />
+                        <p>Regresar a Proyecta</p>
                       </button>
                     </li>
                   </NextLink>
-                  <MenuButton data={location} />
-                  <MenuButton data={weHave} />
-                  <MenuButton data={gallery} />
-                  <MenuButton data={joinUs} />
-                  <MenuButton data={tour360} />
+                  <MenuButton data={precios} />
+                  <MenuButton data={avances} />
+                  <MenuButton data={recorrido} />
+                  <MenuButton data={informacion} />
+                  <MenuButton data={porque} />
                 </ul>
               </div>
               <div className="social_icons">
@@ -94,10 +99,7 @@ const TRNavigation = () => {
                   <a href={SOCIAL_NETWORKS.facebook} target="_blank">
                     <AiFillFacebook size={SVGSIZE_MOBILE} />
                   </a>
-                  <a
-                    href={SOCIAL_NETWORKS.instagram}
-                    target="_blank"
-                  >
+                  <a href={SOCIAL_NETWORKS.instagram} target="_blank">
                     <AiOutlineInstagram size={SVGSIZE_MOBILE} />
                   </a>
                   <a href={SOCIAL_NETWORKS.tiktok} target="_blank">
@@ -106,10 +108,7 @@ const TRNavigation = () => {
                   <a href={SOCIAL_NETWORKS.whatsapp} target="_blank">
                     <BsWhatsapp size={SVGSIZE_MOBILE} />
                   </a>
-                  <a
-                    href={SOCIAL_NETWORKS.youtube}
-                    target="_blank"
-                  >
+                  <a href={SOCIAL_NETWORKS.youtube} target="_blank">
                     <AiFillYoutube size={SVGSIZE_MOBILE} />
                   </a>
                 </div>
@@ -121,19 +120,19 @@ const TRNavigation = () => {
           <div className="navigation-bar__content">
             <div className="navigation-bar__ul">
               <ul className="buttons">
-                <NextLink href='/bosque-alto'>
+                <NextLink href="/">
                   <li>
-                    <button className="item_button bosquealto_btn">
-                      <FaTree />
-                      <p>Ir a Bosque Alto</p>
+                    <button className="item_button backhome">
+                      <FaHome />
+                      <p>Regresar a Proyecta</p>
                     </button>
                   </li>
                 </NextLink>
-                <MenuButton data={location} />
-                <MenuButton data={weHave} />
-                <MenuButton data={gallery} />
-                <MenuButton data={joinUs} />
-                <MenuButton data={tour360} />
+                <MenuButton data={precios} />
+                <MenuButton data={avances} />
+                <MenuButton data={recorrido} />
+                <MenuButton data={informacion} />
+                <MenuButton data={porque} />
               </ul>
             </div>
             <div className="social_icons">
@@ -141,10 +140,7 @@ const TRNavigation = () => {
                 <a href={SOCIAL_NETWORKS.facebook} target="_blank">
                   <AiFillFacebook size={SVGSIZE} />
                 </a>
-                <a
-                  href={SOCIAL_NETWORKS.instagram}
-                  target="_blank"
-                >
+                <a href={SOCIAL_NETWORKS.instagram} target="_blank">
                   <AiOutlineInstagram size={SVGSIZE} />
                 </a>
                 <a href={SOCIAL_NETWORKS.tiktok} target="_blank">
@@ -153,10 +149,7 @@ const TRNavigation = () => {
                 <a href={SOCIAL_NETWORKS.whatsapp} target="_blank">
                   <BsWhatsapp size={SVGSIZE} />
                 </a>
-                <a
-                  href={SOCIAL_NETWORKS.youtube}
-                  target="_blank"
-                >
+                <a href={SOCIAL_NETWORKS.youtube} target="_blank">
                   <AiFillYoutube size={SVGSIZE} />
                 </a>
               </div>
@@ -168,4 +161,4 @@ const TRNavigation = () => {
   );
 };
 
-export default TRNavigation;
+export default NavBar;

@@ -4,6 +4,7 @@ import logo from "../../../assets/logo.png";
 import Link from "next/link";
 import { ROUTER } from '../../../shared/routes';
 import { HiOutlineBookOpen } from "react-icons/hi";
+
 import "./styles.scss";
 
 const TRFooter = () => {
@@ -13,15 +14,6 @@ const TRFooter = () => {
         <Image alt="logo" src={logo} />
       </div>
       <div>
-        {/*         <p>¿Quieres estar al tanto de nuestras promociones?</p>
-        <p>¡Suscríbete!</p>
-        <div className="subscribe">
-          <input placeholder="Escribe tu email aquí" />
-          <button>
-            <p className="bold mediumText">Suscribirme</p>
-          </button>
-        </div> */}
-
         <div className="book">
           <Link href={`/${ROUTER.libroDeReclamaciones}`} target="_blank">
             <HiOutlineBookOpen size={25} />

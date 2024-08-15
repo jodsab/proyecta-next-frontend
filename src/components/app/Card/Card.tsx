@@ -7,6 +7,7 @@ import {
 import { BiBadgeCheck } from "react-icons/bi";
 import { FaTiktok } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
+import Link from "next/link";
 import "./styles.scss";
 
 const SVGSIZE = 25;
@@ -26,7 +27,7 @@ const TRCard = () => {
           <div className="flex_body_left">
             <div>
               <p className="semiBold mediumText">CONDOMINIO CAMPESTRE</p>
-              <p className="bold bigText">BOSQUE ALTO</p>
+              <Link className="btn_bosque_alto" href='/bosque-alto'><p className="bold bigText">BOSQUE ALTO</p></Link>
             </div>
             <div className="descuento">
               <p>
