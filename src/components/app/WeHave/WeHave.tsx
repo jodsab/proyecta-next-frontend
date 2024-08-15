@@ -13,20 +13,21 @@ const TRWeHave = () => {
     <div className="trwehave_container content">
       <div className="header">
         <p className="mediumText bold weHave">¡TENEMOS LO QUE NECESITAS!</p>
+
       </div>
       <div className="list_benefits">
-        <div className="item_benefit">
+        {/* <div className="item_benefit">
           <MdSecurity size={SVGSIZE} />
           <p>Seguridad 24 horas</p>
-        </div>
+        </div> */}
         <div className="item_benefit">
           <IoIosWater size={SVGSIZE} />
-          <p>Servicios básicos</p>
+          <p>Se entregará con todos los servicios básicos</p>
         </div>
-        <div className="item_benefit">
+        {/*         <div className="item_benefit">
           <GiParkBench size={SVGSIZE} />
           <p>Zonas de descanso</p>
-        </div>
+        </div> */}
         <div className="item_benefit">
           <TbSoccerField size={SVGSIZE} />
           <p>Areas deportivas</p>
@@ -41,11 +42,11 @@ const TRWeHave = () => {
         </div>
         <div className="item_benefit">
           <MdOutlineAreaChart size={SVGSIZE} />
-          <p>Areas de recreación</p>
+          <p>Areas de comunes, desde zonas de parrila hasta espacios de juegos para niños</p>
         </div>
         <div className="item_benefit">
           <FaFileSignature size={SVGSIZE} />
-          <p>Titulo de propiedad</p>
+          <p>Se entregará con título de propiedad independizado</p>
         </div>
       </div>
     </div>

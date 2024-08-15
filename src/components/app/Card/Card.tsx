@@ -25,12 +25,12 @@ const TRCard = () => {
         <div className="card_body">
           <div className="flex_body_left">
             <div>
-              <p className="semiBold bigText">CONDOMINIO CAMPESTRE</p>
+              <p className="semiBold mediumText">CONDOMINIO CAMPESTRE</p>
               <p className="bold bigText">BOSQUE ALTO</p>
             </div>
             <div className="descuento">
               <p>
-                Descuento de hasta <strong>30%</strong> por pago al contado
+                Descuento de hasta <strong>30%</strong> por pago al contado de lotes de 200m2
               </p>
             </div>
           </div>

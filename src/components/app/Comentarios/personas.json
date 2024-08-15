@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "imagen": "persona1.png",
+    "nombre": "OLGA ACOSTA",
+    "estado": "Propietaria",
+    "comentario": "Siempre quise tener un terrenito. Antes me dedicaba a la construcción, pero desde hace 4 años me dedico a referir clientes para Proyecta entre mis familiares y amigos"
+  },
+  {
+    "id": 2,
+    "imagen": "persona2.png",
+    "nombre": "ROYER DEL AGUILA",
+    "estado": "Propietario",
+    "comentario": "Tener un terrenito siempre ha sido mi sueño. Antes me dedicaba a la construcción, pero desde hace cuatro años, me especializo en referir clientes para Proyecta. Ayudar a amigos y familiares a encontrar su hogar ideal es realmente gratificante"
+  },
+  {
+    "id": 3,
+    "imagen": "persona3.png",
+    "nombre": "VALERIA MENDOZA",
+    "estado": "Propietaria",
+    "comentario": "Siempre he deseado tener un terrenito. Trabajaba en construcción, pero desde hace cuatro años, me dedico a referir clientes para Proyecta entre familiares y amigos. Es una gran alegría poder ayudar a otros a encontrar el lugar donde construir sus sueños."
+  },
+  {
+    "id": 4,
+    "imagen": "persona4.png",
+    "nombre": "CRISTINA MENDEZ",
+    "estado": "Promotor inmobiliario",
+    "comentario": "Tener un terrenito siempre fue uno de mis sueños. Solía estar en el rubro de la construcción, pero desde hace cuatro años, me dedico a referir clientes a Proyecta. Es increíble ver cómo mis recomendaciones ayudan a amigos y familiares a encontrar su lugar ideal"
+  },
+  {
+    "id": 5,
+    "imagen": "persona5.png",
+    "nombre": "RUBEN DARIO",
+    "estado": "Vendedor",
+    "comentario": "Siempre quise tener un terrenito propio. Durante muchos años trabajé en la construcción, pero hace cuatro años encontré una nueva pasión refiriendo clientes a Proyecta. Ahora disfruto ayudando a mis amigos y familiares a encontrar las mejores propiedades disponibles"
+  }
+]

@@ -1,21 +1,21 @@
 "use client";
 import { useEffect } from "react";
 import TRNavigation from "@/components/app/Navigation/Navigation";
-import TRPortada from "@/components/app/Portada/Portada";
 import TRCard from "@/components/app/Card/Card";
-import TRLocation from "@/components/app/Location/Locations";
 import TRDescription from "@/components/app/Description/Description";
 import WeHave from "@/components/app/WeHave/WeHave";
 import TRGallery from "@/components/app/Gallery/Gallery";
 import TRMultimedia from "@/components/app/Multimedia/Multimedia";
 import TRForm from "@/components/app/Form/Form";
-import TRComentarios from "@/components/app/Comentarios/Comentarios";
+import Comentarios from "@/components/app/Comentarios/Comentarios";
 import TRFamilys from "@/components/app/Familys/Familys";
 import TRFooter from "@/components/app/Footer/Footer";
+import Referido from "@/components/app/Referido/Referido";
 import { homeScroll } from "@/shared/scrolls";
 import sticker from '../assets/home/sticker.png';
 import Image from "next/image";
 import Aos from "aos";
+import Ubicacion from "../components/app/Ubicacion/Ubicacion";
 import ReactGA from "react-ga";
 import "aos/dist/aos.css";
 import "./index.scss";
@@ -38,14 +38,21 @@ export default function HomePage() {
           <Image alt="sticker" className="lotes" src={sticker} />
         </div>
         <div className='iframe__container'>
-          <iframe className="iframe__content" src="https://player.vimeo.com/video/842527615?h=288624a18b&autoplay=1&background=1&texttrack=1&loop=1&muted=1&title=0&byline=0&portrait=0&speed=0&badge=0&autopause=0&player_id=0&app_id=58479" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-        </div>
+          <video
+            className="iframe_content"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{ width: '100%', height: 'auto' }}
+          >
+            <source src="./assets/videoportada.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video></div>
         <div className="card_desktop_container">
           <TRCard />
         </div>
       </div>
-
-
       {/* <div className="portada_mobile_container">
         <TRPortada />
       </div> */}
@@ -59,7 +66,7 @@ export default function HomePage() {
           </div>
 
           <div id={location.id} className="element">
-            <TRLocation />
+            <Ubicacion />
           </div>
           <div id={weHave.id}>
             <WeHave />
@@ -74,8 +81,6 @@ export default function HomePage() {
             <TRForm />
           </div>
         </div>
-
-
         <div className="form_space_mobile_container" data-aos="fade-left">
           <div className="space_desktop_form" id={form.id}>
             <TRForm />
@@ -83,14 +88,11 @@ export default function HomePage() {
         </div>
       </div>
       <div id={joinUs.id}>
-        <TRComentarios />
+        <Comentarios />
         <TRFamilys />
       </div>
-
-
-
+      <Referido />
       <TRFooter />
-
     </div>
   );
 }

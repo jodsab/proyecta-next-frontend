@@ -38,7 +38,7 @@ const TRLocation = () => {
         <iframe
           src={
             toggleLocation
-              ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5516.862184775248!2d-76.9932687640077!3d-12.111422442449285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7403a8cd151%3A0x9811fa9f1a7dab1b!2sProyecta%20Innova%20Trasciende%20Sac!5e0!3m2!1ses-419!2spe!4v1684968948292!5m2!1ses-419!2spe"
+              ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.3557473051432!2d-77.03549603038418!3d-12.083168587867311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8f521e038d5%3A0x6e0b19422c64e9ec!2sAv.%20Arequipa%201860%2C%20Lince%2015046!5e0!3m2!1ses-419!2spe!4v1723677655364!5m2!1ses-419!2spe"
               : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3914.491887888356!2d-77.5039181!3d-11.1511697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9106e16cff8be89d%3A0xe7d0cf855130c659!2sBosque%20Alto%20El%20Progreso!5e0!3m2!1ses!2spe!4v1696281520910!5m2!1ses!2spe"
           }
           className="iframe_map"

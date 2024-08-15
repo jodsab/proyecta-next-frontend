@@ -4,9 +4,9 @@ import Portada from '../bosque-alto/components/Portada/Portada'
 import TRFooter from "@/components/app/Footer/Footer";
 import Formulario from '../bosque-alto/components/Formulario/Formulario'
 import Info from "./components/Info/Info";
-import Ubicacion from './components/Ubicacion/Ubicacion';
-import Comentarios from './components/Comentarios/Comentarios';
-import Referido from './components/Referido/Referido'
+import Ubicacion from '../../../components/app/Ubicacion/Ubicacion';
+import Comentarios from '../../../components/app/Comentarios/Comentarios';
+/* import Referido from '../../../components/app/Referido/Referido' */
 import { homeScroll } from './components/NavBar/scrolls';
 import TRForm from '@/components/app/Form/Form';
 import "./index.scss";
@@ -40,9 +40,9 @@ export default function BosqueAlto() {
         <div id={nosotros.id}>
           <Comentarios />
         </div>
-        <div id={referido.id}>
+        {/*         <div id={referido.id}>
           <Referido />
-        </div>
+        </div> */}
         <div className="form_mobile_extra">
           <TRForm />
         </div>

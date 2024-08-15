@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
+import { Button, Drawer, Radio, Space } from 'antd';
 import Image from "next/image";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { homeScroll } from "@/shared/scrolls";
-import { Drawer, Button } from "antd";
 import { LuMenu } from "react-icons/lu";
 import { IoCloseOutline } from "react-icons/io5";
 import useAnalyticsEventTracker from "@/hooks/reactGA.hook";
@@ -60,21 +60,6 @@ const TRNavigation = () => {
     <div className="tr_navigation_container">
       <div className="tr_navigation">
         <Image className="logo" src={Logo} alt="logo" />
-        {/*         <div>
-          <Link
-            activeClass="active"
-            to={form.id}
-            smooth
-            spy
-            duration={500}
-            offset={-60}
-          >
-            <button className="button">
-              <p className="bold">Solicitar información</p>
-            </button>
-
-          </Link>
-        </div> */}
         <div className="mobile_content">
           <button className="toggle_button" onClick={showDrawer}>
             {

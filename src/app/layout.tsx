@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Roboto } from "next/font/google";
+import './globals.scss';
 
 export const metadata = {
   title: "Proyecta Innova TR SAC",

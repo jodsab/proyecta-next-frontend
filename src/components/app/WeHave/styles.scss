@@ -2,6 +2,10 @@
 @import "../../../resources/mediaQueries.scss";
 
 .trwehave_container {
+  .condominio {
+    margin-top: 15px;
+    font-weight: bold;
+  }
   .header {
     display: flex;
     justify-content: center;
@@ -21,7 +25,7 @@
     justify-content: center;
     gap: 20px;
     .item_benefit {
-      padding: 30px 8px;
+      padding: 30px 12px;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -31,7 +35,8 @@
       border: 2px solid $primary-400;
       border-radius: 20px;
       text-align: center;
-      width: 120px;
+      width: 130px;
+      max-width: 100%;
     }
   }
 }
