@@ -39,10 +39,10 @@
       font-weight: bold;
       font-size: 55px;
       .blue {
-        color: $fourth;
+        color: $primary;
       }
       .green {
-        color: $fifth;
+        color: $secondary;
       }
     }
     .icons {
@@ -62,10 +62,10 @@
           width: 70px;
         }
         .first {
-          background-color: $fifth;
+          background-color: $primary;
         }
         .second {
-          background-color: $fourth;
+          background-color: $secondary;
         }
 
         .fullBlue {
@@ -77,21 +77,21 @@
 
         .leftText {
           color: white;
-          background-color: $fourth;
+          background-color: $primary;
           padding: 15px 25px;
           text-align: center;
           font-weight: bold;
-          width: 60%;
+          width: 65%;
           border-radius: 55px;
         }
 
         .rightText {
           color: white;
-          background-color: $fifth;
+          background-color: $secondary;
           padding: 15px 25px;
           text-align: center;
           font-weight: bold;
-          width: 60%;
+          width: 65%;
           border-radius: 55px;
         }
       }

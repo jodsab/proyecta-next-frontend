@@ -199,7 +199,7 @@
           bottom: 0;
           height: 4px; /* Altura de la barra */
           width: 0;
-          background-color: $secondary; /* Color de la barra */
+          background-color: $primary; /* Color de la barra */
           transition: width 0.3s ease;
         }
 
@@ -217,7 +217,7 @@
               color: black;
             }
             a:hover {
-              color: $secondary;
+              color: $primary;
             }
           }
         }

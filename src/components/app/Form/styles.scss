@@ -2,7 +2,7 @@
 @import "../../../resources/mediaQueries.scss";
 
 .trform_container {
-  background-color: $secondary;
+  background-color: $primary;
   padding: 25px 30px 10px 30px;
 
   .loading_spinner_container {
@@ -103,7 +103,7 @@
       }
 
       .button_super {
-        background-color: $primary;
+        background-color: $secondary;
         color: white;
         border: 0;
         cursor: pointer;

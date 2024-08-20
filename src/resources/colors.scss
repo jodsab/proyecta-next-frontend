@@ -3,15 +3,17 @@ $primary-100: #e0e8f9;
 $primary-200: #c8d6f5;
 $primary-300: #a1bcef;
 $primary-400: #7598e5;
-$primary-500: #5476dd;
+$primary-500: rgba(56, 91, 157, 1);
 $primary-600: #4760d2;
 $primary-700: #3648bf;
 $primary-800: #323c9b;
 $primary-900: #2d377b;
 $primary-950: #1f234c;
 
-$primary: #1f1b62;
-$secondary: #4760d2;
+/* $primary: #1f1b62;
+$secondary: #4760d2; */
+$primary: rgba(56, 91, 157, 1);
+$secondary: #7bcd3c;
 /* $primary: #4760d2;
 $secondary: #1f1b62; */
 $tertiary: rgba(100, 170, 243, 0.5);
@@ -21,6 +23,6 @@ $tertiary: rgba(100, 170, 243, 0.5);
 $fourth: #3074a4;
 $fifth: #abcb3d;
 $sixth: #ddeafd;
-$orange: #ff551f;
+$orange: #f7ad23;
 $red: #fe0000;
 $gray: rgba(238, 233, 233, 0.5);
