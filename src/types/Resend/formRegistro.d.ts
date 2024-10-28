@@ -3,6 +3,7 @@ interface IFormRegistro {
   nombre: string,
   apellido: string,
   email: string,
+  DNI?: string,
   telefono: string,
   terms: boolean,
   politics: boolean,
